@@ -1,11 +1,9 @@
 version: 2.1
-orbs:
-  node: circleci/node@12.19.0
-workflows:
-  node-tests:
-    jobs:
-      - node/test
-
+jobs:
+  build:
+    docker:
+      # specify the version you desire here
+      - image: circleci/node:12.19.0
 
     steps:
       - checkout
